@@ -19,9 +19,9 @@ const app = () => {
         style={styles.image}
       >
         <Text style={styles.text}>Coffee Shop</Text>
-        <Link style={{marginHorizontal:"auto"}} href="/explore" asChild>
-          <Pressable>
-            <Text>Explore</Text>
+        <Link style={{ marginHorizontal: "auto" }} href="/contact" asChild>
+          <Pressable style={styles.button}>
+            <Text style={styles.buttonText}>Contact</Text>
           </Pressable>
         </Link>
       </ImageBackground>
@@ -58,6 +58,20 @@ const styles = StyleSheet.create({
     textAlign: "center",
     textDecorationLine: "underline",
     backgroundColor: "rgba(0,0,0,0.5)",
+    padding: 4,
+  },
+  button: {
+    height: 60,
+    borderRadius: 20,
+    backgroundColor: "rgba(0,0,0,0.75)",
+    padding: 6,
+    justifyContent: "center",
+  },
+  buttonText: {
+    color: "white",
+    fontSize: 16,
+    fontWeight: "bold",
+    textAlign: "center",
     padding: 4,
   },
 });
