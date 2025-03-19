@@ -26,6 +26,8 @@ export default function MenuScreen() {
       <FlatList
         data={MENU_ITEMS}
         keyExtractor={(item) => item.id.toString()}
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={styles.contentContainer}
         renderItem={({ item }) => (
           <View>
             <View>
@@ -41,5 +43,12 @@ export default function MenuScreen() {
 }
 
 function createStyles(theme, colorScheme) {
-  return StyleSheet.create({});
+  return StyleSheet.create({
+    contentContainer:{
+      paddingTop:10,
+      paddingBottom:20,
+      paddingHorizontal:12,
+      backgroundColor:theme.background,
+    }
+  });
 }
